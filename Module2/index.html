@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Module 2</title>
+  </head>
+  <body>
+    <p id="output">Wait for it...</p>
+    <script>
+      var firstnum = parseInt(prompt("Enter first number"));
+      console.log("First number = " + firstnum);
+      var secondnum = parseInt(prompt("Enter second number"));
+      console.log("Second number = " + secondnum);
+      var sum = firstnum + secondnum;
+      console.log("Sum = " + sum);
+      var mult = firstnum * secondnum;
+      console.log("Product = " + mult);
+      var total = sum * 3;
+      console.log("3 times the sum = " + total);
+      document.getElementById('output').innerHTML = "Sum = " + sum + "<br>Product = " + mult + "<br>Three times the sum = " + total + "<br>";
+    </script>
+  </body>
+</html>
