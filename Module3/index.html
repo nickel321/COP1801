@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Module 3</title>
+  </head>
+  <body>
+    <p id="output"></p>
+    <p>Input string: <input id="inputTextbox"></p>
+    <button id="inputButton">Return the input string</button>
+    <p id="output2"></p>
+    <!--Javascript for Activity - reversing a string.-->
+    <script>
+      var inputString = prompt("Please input a string.", "Input");
+      var result = reverseString(inputString);
+      function reverseString (str) {
+        return str.split("").reverse().join("");
+      }
+      document.getElementById('output').innerHTML = result;
+    </script>
+
+    <!--JQuery for Course Project - Display input string-->
+    <script>
+
+      $(function(){
+        $("#inputButton").click(function(){
+          $("#output2").html($("#inputTextbox").val());
+        });
+      });
+
+    </script>
+  </body>
+</html>
