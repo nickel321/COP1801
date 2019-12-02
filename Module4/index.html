@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Module 3</title>
+  </head>
+  <body>
+    <p>Input number 1: <input id="number1"></p>
+    <p>Input number 2: <input id="number2"></p>
+    <p>Input number 3: <input id="number3"></p>
+    <button onclick="numberSort(number1.value, number2.value, number3.value)" id="numSort">Sort Numbers</button>
+    <p id="output"></p>
+    <p>Are you a student or parent? <input id="inputTextbox"></p>
+    <button id="inputButton">Get Message</button>
+    <p id="output2"></p>
+    <!--Javascript for Activity - sorting input numbers.-->
+    <script>
+      function numberSort(num1, num2, num3){
+        var numbersList = [num1, num2, num3];
+        numbersList.sort();
+        document.getElementById('output').innerHTML = "Sorted list: " + numbersList[0] + " " + numbersList[1]
+        + " " + numbersList[2];
+      }
+    </script>
+
+    <!--JQuery for Course Project - Display message if user puts in student or parent-->
+    <script>
+      $(function(){
+        $("#inputButton").click(function(){
+          var str = $("#inputTextbox").val().toLowerCase();
+          if(str.indexOf('student') >= 0){
+            $("#output2").html("I am a Rasmussen Student.")
+          }
+          else if (str.indexOf('parent') >= 0) {
+            $("#output2").html("I am a Parent.")
+          }
+          else{
+            $("#output2").html("Incorrent Input");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
