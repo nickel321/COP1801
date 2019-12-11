@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Module 6 - Activity</title>
+  </head>
+  <body>
+    <h1>Input height and width of a rectangular room.</h1>
+    <form id="myForm">
+      Width: <input type="text" name="width"><br>
+      Length: <input type="text" name="height"><br>
+    </form>
+    <button onclick="myFunction()">Submit</button>
+    <br><br>
+    <p id="solution"></p>
+    <!--Javascript for Activity - Getting values from form and calculating the area.-->
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myForm");
+      var w = x.elements[0].value;
+      var l = x.elements[1].value;
+      var a = w * l;
+      document.getElementById("solution").innerHTML = "The area is " + a;
+    }
+    </script>
+  </body>
+</html>
